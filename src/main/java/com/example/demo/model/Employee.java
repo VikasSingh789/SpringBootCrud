@@ -21,7 +21,7 @@ public class Employee {
 	private Long eid;
 	
 	@Column(name="ename")
-	private String ename;
+	private String ename; 
 	
 	@Column(name="salary")
 	private Integer salary;
