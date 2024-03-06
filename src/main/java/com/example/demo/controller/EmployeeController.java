@@ -30,6 +30,11 @@ public class EmployeeController {
 	public Employee get(@PathVariable Long eid) {
 		return empser.get(eid);
 	}
+
+	@GetMapping("/employee/getEmployeeByName/{ename}")
+	public Employee getByEmployeeName(@PathVariable String ename) {
+		return empser.getByName(ename);
+	}
 	
 	@PostMapping("/employee")
 	public Employee save(@RequestBody Employee emp) {
