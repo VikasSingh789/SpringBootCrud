@@ -1,0 +1,19 @@
+POST:- http://localhost:8080/employee
+{
+    "ename":"Akash",
+    "address":"Bapunagar",
+    "salary":70000
+}
+
+GET:- http://localhost:8080/employees
+GET:- http://localhost:8080/employee/1 (GetByID)
+GET:- http://localhost:8080/employee/getEmployeeByName/Vikas (GetByName)
+
+Delete:- http://localhost:8080/employee/delete/1 (DeleteByID)
+
+PUT:- http://localhost:8080/employee/update/3
+{
+    "ename":"Vikas",
+    "address":"Bapunagar",
+    "salary":80000
+}
