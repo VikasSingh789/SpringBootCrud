@@ -23,7 +23,11 @@ public class EmployeeService {
 	
 	public Employee get(Long eid) {
         return emprep.findById(eid).get();
-    }
+    	}
+
+	public Employee getByName(String ename) {
+        	return emprep.getEmployeeByName(ename);
+    	}
 
 	public Employee save(Employee emp) {
 		return emprep.save(emp);
