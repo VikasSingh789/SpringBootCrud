@@ -1,0 +1,28 @@
+Medium:-     https://salithachathuranga94.medium.com/unit-and-integration-testing-in-spring-boot-micro-service-901fc53b0dff
+JavaTechie:- https://github.com/Java-Techie-jt/integration-test-demo/tree/main
+https://stackoverflow.com/questions/74582305/unit-and-integration-testwith-database-for-a-save-method
+==================================================================================================================================================================
+
+http://localhost:8080/h2-console
+
+Notes:-
+-------
+@MockBean:- By using @MockBean, We are Mocking Employee Repository, because we only want to check how Service is Behaving and we are not worried about how Employee Repository is Working.
+@BeforeEach:- This Method will be called for each and every Test case added to the Particular Class.
+@BeforeAll:-  This Method will be called only once for executing all the Test cases
+Similarly, @AfterAll and AfterEach, will be used to clear the data we have created.
+@Display:- We can use this annotation on top of method to display it as method name when executed or test runs.
+@Disabled:- Any Test case if we want to Disable.
+
+Controller Layer:-
+------------------
+-> Controller layer will be called when we hit any of the endpoints
+-> Will be Using "WebMvcTest" instead of "@SpringBootTest".
+-> As we need to test our endpoints, we need to create the context itself.
+-> We need to Mock that particular Mvc by using "MockMvc" since we are using "WebMvcTest" on top of controller.
+
+
+
+@RunWith is a JUnit annotation. It is used to tell JUnit to run the test using a specific "runner" class instead of its default runner.
+@MockBean creates mock and injects it into Application Context
+@Mock annotation only creates it, if you want to inject it, you can do it manually or with @InjectMocks annotation
